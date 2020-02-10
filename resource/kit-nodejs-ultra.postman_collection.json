@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "bfb81e94-35e3-4ba8-8d85-e41afc1d8b67",
+		"name": "kit-nodejs-ultra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"price\": 45.55,\n\t\"firstRegistrationDate\": \"2018-01-31T11:14:01.448Z\",\n\t\"manufacturer\": {\n\t\t\"name\": \"Somenameisalex\",\n\t\t\"phone\": \"+380973210167\",\n\t\t\"siret\": 112345678912\n\t},\n\t\"owners\": [\n\t\t{\n\t\t\t\"name\": \"testname\",\n\t\t\t\"purchaseDate\": \"2019-01-31T11:14:01.448Z\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"test\",\n\t\t\t\"purchaseDate\": \"2020-01-31T11:14:01.448Z\"\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cars",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cars",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cars"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific car",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cars/[:id]",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cars",
+						"[:id]"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update specific car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"price\": 45.55,\n\t\"firstRegistrationDate\": \"2020-01-31T11:14:01.448Z\",\n\t\"manufacturer\": {\n\t\t\"name\": \"Somenameisalex\",\n\t\t\"phone\": \"+380973210176\",\n\t\t\"siret\": 112345678912\n\t},\n\t\"owners\": [\n\t\t{\n\t\t\t\"name\": \"testname\",\n\t\t\t\"purchaseDate\": \"2020-01-31T11:14:01.448Z\"\n\t\t},\n\t\t{\n\t\t\t\"name\": \"test\",\n\t\t\t\"purchaseDate\": \"2020-01-31T11:14:01.448Z\"\n\t\t}\n\t]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/cars/ [:id]",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cars",
+						" [:id]"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete specific car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/cars/ [:id]",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"cars",
+						" [:id]"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get server status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,9 @@
+version: "3"
+services:
+  kitnodejsultraapplication:
+    build: .
+    container_name: kitnodejsultra
+    env_file:
+      - .env
+    ports:
+      - "${APPLICATION_PORT}:${APPLICATION_PORT}"
