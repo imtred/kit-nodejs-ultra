@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "domain-layer": "file:../domain",
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   },
   "devDependencies": {
     "prettier": "^1.19.1",
